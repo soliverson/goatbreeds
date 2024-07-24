@@ -53,14 +53,29 @@ document.addEventListener('DOMContentLoaded', async () => {
             breedSelect.appendChild(option);
         });
 
+        // Load last selected breed from local storage
+        const lastSelectedBreed = localStorage.getItem('selectedBreed');
+        if (lastSelectedBreed) {
+            breedSelect.value = lastSelectedBreed;
+            const selectedBreed = data.find(breed => breed.name === lastSelectedBreed);
+            if (selectedBreed) {
+                breedTitle.textContent = selectedBreed.name;
+                breedDescription.innerHTML = formatCharacteristics(selectedBreed.characteristics);
+                dataContainer.classList.remove('hidden');
+            }
+        }
+
         breedSelect.addEventListener('change', () => {
             const selectedBreed = data.find(breed => breed.name === breedSelect.value);
             if (selectedBreed) {
                 breedTitle.textContent = selectedBreed.name;
                 breedDescription.innerHTML = formatCharacteristics(selectedBreed.characteristics);
                 dataContainer.classList.remove('hidden');
+                // Save selected breed to local storage
+                localStorage.setItem('selectedBreed', selectedBreed.name);
             } else {
                 dataContainer.classList.add('hidden');
+                localStorage.removeItem('selectedBreed');
             }
         });
 
