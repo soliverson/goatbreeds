@@ -218,12 +218,21 @@ footer {
   .right {
     order: 2;
     margin-top: 20px;
+    max-width: 100%; /* Ensure the carousel takes full width on smaller screens */
   }
 }
 
 @media (max-width: 480px) {
   header .logo {
     max-width: 200px; /* Even smaller logo size for mobile screens */
+  }
+
+  .carousel {
+    max-width: 100%; /* Ensure the carousel takes full width on smaller screens */
+  }
+
+  .carousel img {
+    width: 100%; /* Ensure the images are responsive */
   }
 }
 
