@@ -79,16 +79,15 @@ main {
 }
 
 .left {
-  flex: 1 1 100%;
-  margin-bottom: 20px;
+  flex: 1;
+  margin-right: 20px;
 }
 
 .right {
-  flex: 1 1 100%;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 .carousel {
@@ -207,6 +206,19 @@ footer {
   header .logo {
     max-width: 300px; /* Smaller logo size for tablets */
   }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .left {
+    order: 1;
+  }
+
+  .right {
+    order: 2;
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -225,6 +237,31 @@ footer {
   }
 
   header .logo {
-    max-width: 800px; 
+    max-width: 500px; /* Default logo size for desktops */
   }
+}
+
+/* Table styles */
+.goat-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.goat-data-table th, .goat-data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.goat-data-table th {
+  background-color: #f2f2f2;
+}
+
+.goat-data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.goat-data-table tr:hover {
+  background-color: #ddd;
 }
