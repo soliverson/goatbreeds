@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goat Profile</title>
+  <title>Goat Breeds</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
@@ -25,43 +25,39 @@
   </nav>
 
   <main>
+    <h1>Goat Breeds</h1>
+    <div class="top-section">
+      <div class="dropdown-container">
+        <label for="breedSelect">Select breed:</label>
+        <select id="breedSelect" class="large-select">
+          <option value="">Select Breed</option>
+        </select>
+      </div>
+    </div>
     <div class="content">
-      <h2>Goat Profiles</h2>
-      <div id="profile-container">
-        <!-- Profiles will be loaded here by JavaScript -->
+      <div class="left">
+        <div id="loading" class="hidden">Loading...</div>
+        <div id="error" class="hidden"></div>
+        <div id="dataContainer" class="hidden">
+          <h2 id="breedTitle"></h2>
+          <div id="breedDescription"></div>
+        </div>
       </div>
-      <div class="add-goat-section">
-        <br><br><br><h3>Add Your Goat</h3>
-        <form id="goat-form">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div>
-            <label for="breed">Breed:</label>
-            <input type="text" id="breed" name="breed" required>
-          </div>
-          <div>
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
-          </div>
-          <div>
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" required></textarea>
-          </div>
-          <div>
-            <label for="image">Image URL:</label>
-            <input type="url" id="image" name="image">
-          </div>
-          <button type="submit">Add Goat</button>
-        </form>
+      <div class="right">
+        <div class="carousel">
+          <img id="carouselImage" src="images/goatfence.webp" alt="Goat Image">
+        </div>
       </div>
+    </div>
+    <div class="names-section">
+      <h2>Popular Goat Names</h2>
+      <ul id="namesList"></ul>
     </div>
   </main>
   <footer>
     <p>&copy; 2024 GoatTrack. All rights reserved.</p>
   </footer>
   <script src="js/main.js"></script>
-  <script src="js/goat-profile.js"></script>
+  <script src="js/goat-breeds.js"></script>
 </body>
 </html>

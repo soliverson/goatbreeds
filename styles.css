@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +30,7 @@ header {
 }
 
 header .logo {
-  max-width: 500px; 
+  max-width: 500px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -132,6 +133,10 @@ main {
   max-width: 300px;
   height: auto;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Center the carousel */
 }
 
 .carousel img {
@@ -311,6 +316,31 @@ footer {
     max-width: 100%;
   }
 }
+/* Image Carousel Styles */
+.image-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.carousel-image {
+  max-width: 300px; /* Set a max width */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.carousel-image.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image:hover {
+  transform: scale(1.05);
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -336,19 +366,40 @@ footer {
   .menu-toggle {
     margin: 10px auto 0 auto;
   }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .right {
+    order: 2;
+    margin-top: 20px;
+  }
+
+  .carousel {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
   header .logo {
-    max-width: 200px; 
+    max-width: 200px;
   }
 
   .carousel {
-    max-width: 100%; 
+    max-width: 100%;
   }
 
   .carousel img {
-    width: 100%; 
+    width: 100%;
   }
 }
 
@@ -363,6 +414,16 @@ footer {
 
   header .logo {
     max-width: 500px;
+  }
+
+  .carousel {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .image-carousel {
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
