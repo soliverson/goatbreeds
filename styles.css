@@ -29,7 +29,7 @@ header {
 }
 
 header .logo {
-  max-width: 500px;
+  max-width: 500px; 
   height: auto;
   margin-bottom: 10px;
 }
@@ -295,6 +295,8 @@ footer {
   margin-left: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
@@ -360,7 +362,7 @@ footer {
   }
 
   header .logo {
-    max-width: 500px; 
+    max-width: 500px;
   }
 }
 
