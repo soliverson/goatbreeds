@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +30,7 @@ header {
 }
 
 header .logo {
-  max-width: 500px;
+  max-width: 500px; /* Default size */
   height: auto;
   margin-bottom: 10px;
 }
@@ -197,31 +198,6 @@ strong {
   margin-top: 10px;
 }
 
-/* Community Forum styles */
-.content {
-  margin-top: 20px; /* Add this to give some space at the top */
-  max-width: 800px; /* Center the content */
-  margin-left: auto; /* Center the content */
-  margin-right: auto; /* Center the content */
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.content h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#forum-form {
-  margin-top: 20px;
-}
-
-#forum-posts {
-  margin-top: 30px; 
-}
-
 /* Form styles */
 form {
   display: flex;
@@ -303,6 +279,38 @@ footer {
   width: 100%;
 }
 
+/* About page styles */
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.about-container p {
+  flex: 2;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 300px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+  }
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -331,15 +339,15 @@ footer {
 
 @media (max-width: 480px) {
   header .logo {
-    max-width: 200px;
+    max-width: 200px; /* Even smaller logo size for mobile screens */
   }
 
   .carousel {
-    max-width: 100%; 
+    max-width: 100%; /* Ensure the carousel takes full width on smaller screens */
   }
 
   .carousel img {
-    width: 100%;
+    width: 100%; /* Ensure the images are responsive */
   }
 }
 
@@ -353,7 +361,7 @@ footer {
   }
 
   header .logo {
-    max-width: 500px;
+    max-width: 500px; /* Default logo size for desktops */
   }
 }
 
@@ -380,34 +388,4 @@ footer {
 
 .goat-data-table tr:hover {
   background-color: #ddd;
-}
-
-.about-container {
-  display: flex;
-  align-items: flex-start;
-}
-
-.about-container p {
-  flex: 2;
-}
-
-.about-image {
-  flex: 1;
-  max-width: 300px;
-  margin-left: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-image {
-    margin-left: 0;
-    margin-top: 20px;
-    max-width: 100%;
-  }
 }
