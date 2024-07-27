@@ -29,7 +29,7 @@ header {
 }
 
 header .logo {
-  max-width: 500px; /* Default size */
+  max-width: 500px;
   height: auto;
   margin-bottom: 10px;
 }
@@ -306,15 +306,15 @@ footer {
 
 @media (max-width: 480px) {
   header .logo {
-    max-width: 200px; /* Even smaller logo size for mobile screens */
+    max-width: 200px;
   }
 
   .carousel {
-    max-width: 100%; /* Ensure the carousel takes full width on smaller screens */
+    max-width: 100%; 
   }
 
   .carousel img {
-    width: 100%; /* Ensure the images are responsive */
+    width: 100%;
   }
 }
 
@@ -328,7 +328,7 @@ footer {
   }
 
   header .logo {
-    max-width: 500px; /* Default logo size for desktops */
+    max-width: 500px;
   }
 }
 
