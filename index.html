@@ -3,16 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goat Breeds</title>
+  <title>Community Forum</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
   <header id="header">
     <img src="images/goatlogo.webp" alt="GoatTrack Logo" class="logo" />
-    <h1>Goat Breeds</h1>
+    <div class="menu-toggle" id="menu-toggle">
+      &#9776;
+    </div>
   </header>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="goat-breeds.html">Goat Breeds</a></li>
+      <li><a href="goat-profile.html">Goat Profile</a></li>
+      <li><a href="forum.html">Community Forum</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
   <main>
+    <h1>Goat Breeds</h1>
     <div class="top-section">
       <div class="dropdown-container">
         <label for="breedSelect">Select breed:</label>
@@ -44,6 +57,7 @@
   <footer>
     <p>&copy; 2024 GoatTrack. All rights reserved.</p>
   </footer>
+  <script src="js/main.js"></script>
   <script src="js/goat-breeds.js"></script>
 </body>
 </html>

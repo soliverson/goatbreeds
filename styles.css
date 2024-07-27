@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +32,44 @@ header .logo {
   max-width: 500px; /* Default size */
   height: auto;
   margin-bottom: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: #FFD700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+  background-color: #6B4226;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #575757;
+  border-radius: 4px;
 }
 
 /* Main content styles */
@@ -125,6 +162,85 @@ strong {
   color: #333;
 }
 
+/* Profile card styles */
+.profile-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.profile-card .show-more {
+  background-color: #6B4226;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.profile-card .show-more:hover {
+  background-color: #5a3822;
+}
+
+.profile-card .more-info {
+  margin-top: 10px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #6B4226;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #5a3822;
+}
+
 /* Names section styles */
 .names-section {
   max-width: 1200px;
@@ -162,63 +278,29 @@ footer {
   width: 100%;
 }
 
-/* Media queries for responsive design */
+/* Responsive styles */
 @media (max-width: 768px) {
-  .content {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
     flex-direction: column;
-  }
-
-  .left, .right {
     width: 100%;
-    margin: 0;
+    text-align: center;
   }
 
-  .carousel {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-
-  .names-section {
-    width: 100%;
-    margin: 10px;
-  }
-
-  .top-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .large-select {
-    width: 100%;
-  }
-
-  .names-section ul {
+  nav ul.show {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .names-section ul li {
-    flex: 1 1 calc(50% - 20px);
-    margin: 10px;
   }
 
   header .logo {
-    max-width: 300px; /* Smaller logo size for tablets */
+    margin: 0 auto;
   }
 
-  .content {
-    flex-direction: column;
-  }
-
-  .left {
-    order: 1;
-  }
-
-  .right {
-    order: 2;
-    margin-top: 20px;
-    max-width: 100%; /* Ensure the carousel takes full width on smaller screens */
+  .menu-toggle {
+    margin: 10px auto 0 auto;
   }
 }
 
@@ -273,4 +355,34 @@ footer {
 
 .goat-data-table tr:hover {
   background-color: #ddd;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-container p {
+  flex: 2;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 300px;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image {
+    margin-left: 0;
+    margin-top: 20px;
+    max-width: 100%;
+  }
 }

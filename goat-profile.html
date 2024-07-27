@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Forum</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+  <header id="header">
+    <img src="images/goatlogo.webp" alt="GoatTrack Logo" class="logo" />
+    <div class="menu-toggle" id="menu-toggle">
+      &#9776;
+    </div>
+  </header>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="goat-breeds.html">Goat Breeds</a></li>
+      <li><a href="goat-profile.html">Goat Profile</a></li>
+      <li><a href="forum.html">Community Forum</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="content">
+      <h2>Goat Profiles</h2>
+      <div id="profile-container">
+        <!-- Profiles will be loaded here by JavaScript -->
+      </div>
+      <div class="add-goat-section">
+        <br><br><br><h3>Add Your Goat</h3>
+        <form id="goat-form">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" required>
+          </div>
+          <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+          </div>
+          <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+          <div>
+            <label for="image">Image URL:</label>
+            <input type="url" id="image" name="image">
+          </div>
+          <button type="submit">Add Goat</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 GoatTrack. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/goat-profile.js"></script>
+</body>
+</html>
