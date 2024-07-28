@@ -118,7 +118,7 @@ main {
 }
 
 #profile-container {
-  margin-bottom: 40px; /* Add margin below the profiles */
+  margin-bottom: 40px;
 }
 
 .add-goat-section {
@@ -151,7 +151,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto; /* Center the carousel */
+  margin: 0 auto; 
 }
 
 .carousel img {
