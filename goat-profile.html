@@ -26,27 +26,37 @@
       <div id="profile-container">
         <!-- Profiles will be loaded here by JavaScript -->
       </div>
-      <h3>Add Your Goat</h3>
-      <form id="goat-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="breed">Breed:</label>
-        <input type="text" id="breed" name="breed" required>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required></textarea>
-        <label for="image">Image URL:</label>
-        <input type="url" id="image" name="image">
-        <button type="submit">Add Goat</button>
-      </form>
+      <div class="add-goat-section">
+        <h3>Add Your Goat</h3>
+        <form id="goat-form">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" name="breed" required>
+          </div>
+          <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+          </div>
+          <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+          </div>
+          <div>
+            <label for="image">Image URL:</label>
+            <input type="url" id="image" name="image">
+          </div>
+          <button type="submit">Add Goat</button>
+        </form>
+      </div>
     </div>
   </main>
   <footer>
     <p>&copy; 2024 GoatTrack. All rights reserved.</p>
   </footer>
-  <script src="js/main.js"></script>
-  <script src="js/goat-breeds.js"></script>
-
+  <script src="js/goat-profile.js"></script>
 </body>
 </html>
